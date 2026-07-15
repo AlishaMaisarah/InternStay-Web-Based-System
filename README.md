@@ -243,3 +243,4 @@ Welcome to the **InternStay Compass** repository. This document catalogs every m
 * **Files or Components Responsible:**
   * **Kernel:** [Kernel.php](file:///c:/laragon/www/internstay-compass/app/Console/Kernel.php)
   * **Pipeline Command:** [RunPipeline.php](file:///c:/laragon/www/internstay-compass/app/Console/Commands/RunPipeline.php)
+# InternStay-Web-Based-System
