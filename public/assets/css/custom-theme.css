@@ -1,0 +1,476 @@
+/* Custom Premium Purple Theme & Glassmorphism */
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+body {
+    background: linear-gradient(135deg, #f5edf7 0%, #edddec 50%, #e2d1eb 100%) fixed !important;
+    position: relative;
+}
+
+/* Ensure content floats above background SVGs and stays clipped */
+#wrapper,
+#app,
+main {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    overflow-x: hidden;
+}
+.container,
+.sidebar,
+nav {
+    position: relative;
+    z-index: 10;
+}
+
+/* Subtle Background Illustrations */
+.bg-illustration {
+    position: fixed;
+    z-index: 0;
+    opacity: 0.06;
+    pointer-events: none;
+    user-select: none;
+    color: #6f42c1;
+    transition: opacity 0.3s ease;
+}
+
+.illustration-top-left {
+    top: 8%;
+    left: 4%;
+    width: 150px;
+    height: 150px;
+}
+
+.illustration-top-right {
+    top: 10%;
+    right: 6%;
+    width: 180px;
+    height: 180px;
+}
+
+.illustration-mid-left {
+    top: 45%;
+    left: 2%;
+    width: 200px;
+    height: 200px;
+}
+
+.illustration-mid-right {
+    top: 50%;
+    right: 2%;
+    width: 220px;
+    height: 220px;
+}
+
+.illustration-bottom-left {
+    bottom: 5%;
+    left: 6%;
+    width: 160px;
+    height: 160px;
+}
+
+.illustration-bottom-right {
+    bottom: 6%;
+    right: 4%;
+    width: 170px;
+    height: 170px;
+}
+
+/* Responsive Hidden Illustrations to avoid clutter on small viewports */
+@media (max-width: 768px) {
+    .bg-illustration {
+        opacity: 0.03;
+        /* reduce opacity on mobile */
+    }
+
+    .illustration-mid-left,
+    .illustration-mid-right {
+        display: none !important;
+    }
+}
+
+/* Glassmorphism for Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.72) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.45) !important;
+    box-shadow: 0 10px 30px rgba(111, 66, 193, 0.04) !important;
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease !important;
+}
+
+
+.gradient-purple-card {
+    background: linear-gradient(135deg, #6f42c1, #9b59b6);
+    color: white;
+}
+
+.gradient-green-card {
+    background: linear-gradient(135deg, #198754, #20c997);
+    color: white;
+}
+
+.gradient-red-card {
+    background: linear-gradient(135deg, #dc3545, #ff6b6b);
+    color: white;
+}
+
+.card:not(.footer-card):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(111, 66, 193, 0.1) !important;
+    border-color: rgba(111, 66, 193, 0.25) !important;
+}
+
+.card:not(.footer-card):not([style*="background"]):not([class*="gradient-"]):not([class*="bg-"]):hover {
+    background: rgba(255, 255, 255, 0.82) !important;
+}
+
+/* Override card headers for glassmorphic templates */
+.card-header {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.card-footer {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Glassmorphism for Tables */
+.table {
+    --bs-table-bg: rgba(255, 255, 255, 0.3) !important;
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.table th,
+.table td {
+    background-color: transparent !important;
+}
+
+/* Glassmorphic Form Inputs */
+.form-control,
+.form-select,
+.input-group-text {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+    border: 1px solid rgba(111, 66, 193, 0.15) !important;
+    backdrop-filter: blur(5px) !important;
+    -webkit-backdrop-filter: blur(5px) !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    border-color: #6f42c1 !important;
+    box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.2) !important;
+}
+
+/* Buttons Styling */
+.btn-primary {
+    background: linear-gradient(135deg, #6f42c1 0%, #8e44ad 100%) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 15px rgba(111, 66, 193, 0.15) !important;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background: linear-gradient(135deg, #5e35b1 0%, #7d3c98 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(111, 66, 193, 0.3) !important;
+    color: white !important;
+}
+
+.btn-outline-primary {
+    border: 2px solid #6f42c1 !important;
+    color: #6f42c1 !important;
+    background: transparent !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    background: linear-gradient(135deg, #6f42c1 0%, #8e44ad 100%) !important;
+    border-color: transparent !important;
+    color: white !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(111, 66, 193, 0.2) !important;
+}
+
+/* Text and highlights */
+.text-gradient-purple {
+    background: linear-gradient(135deg, #1f0822 0%, #6f42c1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-purple {
+    color: #6f42c1 !important;
+}
+
+.bg-purple-light {
+    background-color: rgba(111, 66, 193, 0.08) !important;
+}
+
+.bg-purple {
+    background-color: #6f42c1 !important;
+}
+
+.badge.bg-primary {
+    background-color: rgba(111, 66, 193, 0.1) !important;
+    color: #6f42c1 !important;
+}
+
+/* Hide browser native password reveal/clear buttons (Edge/IE) */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none !important;
+}
+
+/* Hide Bootstrap's default validation feedback background-image inside input groups */
+.input-group .form-control.is-invalid {
+    background-image: none !important;
+    padding-right: 0.75rem !important;
+}
+
+/* --- Shared topbar & monogram branding --- */
+.brand-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.monogram {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: #c9b0e6;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    font-family: 'Poppins', sans-serif;
+    transition: 0.2s;
+    flex-shrink: 0;
+}
+.monogram svg {
+    width: 30px;
+    height: 30px;
+}
+.brand-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    font-size: 24px;
+    color: white !important;
+    line-height: 1.2;
+}
+.brand-title span {
+    color: #bba6e0 !important;
+}
+
+/* --- horizontal nav links --- */
+.nav-link-custom {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+.nav-link-custom:hover {
+    color: white;
+    background-color: rgba(255,255,255,0.08);
+}
+.nav-link-custom.active {
+    color: white;
+    background-color: rgba(255,255,255,0.12);
+    font-weight: 600;
+}
+
+/* --- avatar --- */
+.avatar-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: #e3f2fd;
+    color: #2196f3;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    letter-spacing:0.5px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+.avatar-link { display:inline-flex; text-decoration:none; }
+.avatar-link .avatar-circle { cursor:pointer; transition: transform .12s ease, box-shadow .12s ease; }
+.avatar-link:hover .avatar-circle { transform: translateY(-1px); box-shadow: 0 10px 22px rgba(0,0,0,0.16); }
+
+/* ---- top navbar: copied sidebar gradient ---- */
+.top-navbar {
+    position: relative !important;
+    z-index: 1000 !important;
+    background: 
+        radial-gradient(ellipse at 20% 30%, rgba(180, 130, 220, 0.25) 0%, transparent 60%),
+        linear-gradient(165deg, #1f0822 0%, #2d1235 50%, #1f1235 100%) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+}
+
+.hover-opacity-100 {
+    opacity: 0.75;
+    transition: opacity 0.2s ease;
+}
+.hover-opacity-100:hover {
+    opacity: 1 !important;
+}
+
+/* --- Collapsible Navigation at <= 1024px --- */
+.navbar-expand-custom {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-expand-custom .navbar-toggler {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+.navbar-expand-custom .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+    flex-grow: 1;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .navbar-expand-custom .navbar-toggler {
+        display: block;
+    }
+    
+    .navbar-expand-custom .navbar-collapse {
+        display: none !important;
+        flex-basis: 100%;
+        flex-grow: 1;
+    }
+    
+    .navbar-expand-custom .navbar-collapse.show {
+        display: block !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 1rem !important;
+        right: 1rem !important;
+        width: auto !important;
+        margin-top: 0.5rem !important;
+        background: rgba(45, 18, 53, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 1.25rem;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        z-index: 1050 !important;
+    }
+    
+    .navbar-expand-custom .navbar-nav-container {
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 0.5rem !important;
+        margin: 1rem 0;
+        width: 100%;
+    }
+    
+    .navbar-expand-custom .nav-link-custom {
+        display: block;
+        width: 100%;
+    }
+    
+    .navbar-expand-custom .auth-buttons-container {
+        flex-direction: column;
+        align-items: stretch !important;
+        gap: 0.75rem !important;
+        width: 100%;
+    }
+    
+    .navbar-expand-custom .auth-buttons-container form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .brand-wrapper small {
+        display: none !important;
+    }
+    .nav-link-custom {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .brand-wrapper {
+        gap: 0.3rem;
+    }
+    .brand-title {
+        font-size: 1.25rem;
+    }
+    .monogram {
+        width: 2rem;
+        height: 2rem;
+    }
+    .monogram svg {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .top-navbar {
+        padding-left: 0.6rem !important;
+        padding-right: 0.6rem !important;
+    }
+}
+
+/* --- Fluid Grid Wrapper for Catalog Items --- */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+/* --- Fluid Typography with clamp() --- */
+.hero-title-clamp {
+    font-size: clamp(1.8rem, 4vw, 3rem) !important;
+}
+
+.section-heading-clamp {
+    font-size: clamp(1.4rem, 3vw, 2.2rem) !important;
+}
+
+.card-title-clamp {
+    font-size: clamp(1.1rem, 1.5vw, 1.4rem) !important;
+}
+
+/* --- Hide background illustrations on mobile/tablet to avoid layout clutter --- */
+@media (max-width: 768px) {
+    .bg-illustration {
+        display: none !important;
+    }
+}
