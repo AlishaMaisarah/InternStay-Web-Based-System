@@ -269,7 +269,7 @@ def main():
     
     out = scrape_hiredly_static(category_in, limit=limit_in)
     
-    print(json.dumps(out, ensure_ascii=False), flush=True)
+    print(json.dumps(out, ensure_ascii=True), flush=True)
     
     if out.get("error"):
         sys.exit(1)
