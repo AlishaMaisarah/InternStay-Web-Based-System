@@ -69,7 +69,7 @@ Laravel | PHP | MySQL | HTML | CSS | JavaScript | Bootstrap | Python | Leaflet.j
 * **Purpose:** Automates live web scraping of internships (Hiredly, Jobsora, LinkedIn) and rental accommodation properties (PropertyGuru, iProperty, iBilik) for database population.
 * **Technologies Used:** PHP, Python, Undetected ChromeDriver (Selenium UC), SeleniumBase, BeautifulSoup, Requests.
 * **Methods/Algorithms Used:**
-  * Browser Automation & User-Agent spoofing to bypass Cloudflare Turnstile / anti-bot mechanisms.
+  * Automated browser-based data extraction for dynamically rendered websites.
   * BeautifulSoup DOM parsing & data extraction.
   * Dynamic environment variable pass-through (`PATH`, `APPDATA`, `LOCALAPPDATA`) for robust execution under Apache.
 * **Libraries/Packages Used:** `symfony/process` (PHP execution wrapper), Python packages: `BeautifulSoup`, `requests`, `seleniumbase`.
