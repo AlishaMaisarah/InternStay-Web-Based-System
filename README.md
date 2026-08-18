@@ -4,6 +4,7 @@ A centralised web-based system that helps students discover internships and near
 
 Tech Stack:
 Laravel | PHP | MySQL | HTML | CSS | JavaScript | Bootstrap | Python | Leaflet.js | OpenstreetMap
+
 ---
 
 ## 🛠️ Implemented Features & Architecture Catalog
@@ -64,20 +65,7 @@ Laravel | PHP | MySQL | HTML | CSS | JavaScript | Bootstrap | Python | Leaflet.j
 
 ---
 
-### 🏠 5. Budget-Based Rental Recommendation Engine
-* **Purpose:** Evaluates available accommodations against a student's specified monthly budget limit and recommends properties with a matching index score.
-* **Technologies Used:** PHP, Laravel Eloquent, Blade.
-* **Methods/Algorithms Used:**
-  * **Price Penalty Score Formula:** Returns a $100\%$ match if the rental amount is within the student's budget. If the price exceeds the budget, it calculates a penalty based on the percentage over budget:
-    $$Score = \max\left(0, 100 - \left(\frac{\text{Rent Amount} - \text{Max Budget}}{\text{Max Budget}}\right) \times 100\right)$$
-    Properties with scores $\ge 60\%$ are displayed as recommended.
-  * **Availability Prioritization Sorting:** Automatically places closed or occupied accommodations at the bottom of the list.
-* **Files or Components Responsible:**
-  * **Controller:** [PublicRentalController.php](file:///c:/laragon/www/internstay-compass/app/Http/Controllers/PublicRentalController.php)
-
----
-
-### 🕷️ 6. Web Scraping & Ingestion System (Multi-Source Scrapers)
+### 🕷️ 5. Web Scraping & Ingestion System (Multi-Source Scrapers)
 * **Purpose:** Automates live web scraping of internships (Hiredly, Jobsora, LinkedIn) and rental accommodation properties (PropertyGuru, iProperty, iBilik) for database population.
 * **Technologies Used:** PHP, Python, Undetected ChromeDriver (Selenium UC), SeleniumBase, BeautifulSoup, Requests.
 * **Methods/Algorithms Used:**
@@ -92,7 +80,7 @@ Laravel | PHP | MySQL | HTML | CSS | JavaScript | Bootstrap | Python | Leaflet.j
 
 ---
 
-### 🧹 7. Data Cleaning & Deduplication
+### 🧹 6. Data Cleaning & Deduplication
 * **Purpose:** Normalizes raw scraped text data, sanitizes HTML entities, filters junk headers, formats description blocks, and prevents duplicate entries during insertion.
 * **Technologies Used:** PHP, Regex, Laravel Eloquent.
 * **Methods/Algorithms Used:**
@@ -105,7 +93,7 @@ Laravel | PHP | MySQL | HTML | CSS | JavaScript | Bootstrap | Python | Leaflet.j
 
 ---
 
-### 🗺️ 8. Geolocation (Address-to-Coordinate Translation)
+### 🗺️ 7. Geolocation (Address-to-Coordinate Translation)
 * **Purpose:** Translates textual location string data into exact numerical geographic coordinates (`latitude` and `longitude`) to support mapping and spatial radius calculations.
 * **Technologies Used:** PHP, Laravel HTTP Client, OpenStreetMap Nominatim API.
 * **Methods/Algorithms Used:**
@@ -118,7 +106,7 @@ Laravel | PHP | MySQL | HTML | CSS | JavaScript | Bootstrap | Python | Leaflet.j
 
 ---
 
-### 📌 9. Interactive Map System & Visualization
+### 📌 8. Interactive Map System & Visualization
 * **Purpose:** Displays an interactive map visualizer on listing detail pages, plotting nearby accommodation options and public transit stops relative to the internship position.
 * **Technologies Used:** HTML, CSS, JavaScript, Leaflet JS, OpenStreetMap Tiles.
 * **Methods/Algorithms Used:** 
@@ -129,7 +117,7 @@ Laravel | PHP | MySQL | HTML | CSS | JavaScript | Bootstrap | Python | Leaflet.j
 
 ---
 
-### 🛣️ 10. Routing & Navigation Engine
+### 🛣️ 9. Routing & Navigation Engine
 * **Purpose:** Plots the physical street route and calculates travel distances from a user's located position to the target internship, accommodation, or transit stop.
 * **Technologies Used:** JavaScript, Leaflet JS, Leaflet Routing Machine, Google Maps Directions API.
 * **Methods/Algorithms Used:** 
@@ -140,7 +128,7 @@ Laravel | PHP | MySQL | HTML | CSS | JavaScript | Bootstrap | Python | Leaflet.j
 
 ---
 
-### 🚉 11. Public Transport Detection
+### 🚉 10. Public Transport Detection
 * **Purpose:** Scans the area surrounding an internship listing for public transit stations (MRT, LRT, KTM, Monorail) within a specific radius and marks them on the interactive map.
 * **Technologies Used:** JavaScript, Overpass API (OpenStreetMap data interpreter), Leaflet JS.
 * **Methods/Algorithms Used:**
@@ -151,7 +139,7 @@ Laravel | PHP | MySQL | HTML | CSS | JavaScript | Bootstrap | Python | Leaflet.j
 
 ---
 
-### 🔍 12. Search, Filtering, and Query Logs
+### 🔍 11. Search, Filtering, and Query Logs
 * **Purpose:** Implements user-side search panels filtering listings by title keywords, state dropdowns, monthly price range, property types, and geo-distance radius bounds, while keeping query logs.
 * **Technologies Used:** Laravel, PHP, Bootstrap, Blade, MySQL.
 * **Methods/Algorithms Used:**
@@ -164,7 +152,7 @@ Laravel | PHP | MySQL | HTML | CSS | JavaScript | Bootstrap | Python | Leaflet.j
 
 ---
 
-### ⭐ 13. Saved Listings (Bookmarking / Favorites)
+### ⭐ 12. Saved Listings (Bookmarking / Favorites)
 * **Purpose:** Enables student users to bookmark specific internships and accommodations, keeping them saved in a personal folder.
 * **Technologies Used:** Laravel, PHP, MySQL, Bootstrap, AJAX/JavaScript.
 * **Methods/Algorithms Used:** 
@@ -176,7 +164,7 @@ Laravel | PHP | MySQL | HTML | CSS | JavaScript | Bootstrap | Python | Leaflet.j
 
 ---
 
-### ✉️ 14. Email Notification & Personalized Digest System
+### ✉️ 13. Email Notification & Personalized Digest System
 * **Purpose:** Automatically compiles list updates matching the student's saved preference filters, and dispatches them via daily or weekly email newsletters.
 * **Technologies Used:** Laravel Mail, PHP, Gmail SMTP Server, Blade.
 * **Methods/Algorithms Used:** 
@@ -189,7 +177,7 @@ Laravel | PHP | MySQL | HTML | CSS | JavaScript | Bootstrap | Python | Leaflet.j
 
 ---
 
-### 📊 15. Admin Dashboard, Company Verification, & CRUD Panel
+### 📊 14. Admin Dashboard, Company Verification, & CRUD Panel
 * **Purpose:** Management center for system administrators to view system statistics, verify registered Company PICs, review manual internship postings, and perform bulk operations.
 * **Technologies Used:** Laravel, PHP, Bootstrap, Blade, MySQL.
 * **Methods/Algorithms Used:** 
@@ -202,7 +190,7 @@ Laravel | PHP | MySQL | HTML | CSS | JavaScript | Bootstrap | Python | Leaflet.j
 
 ---
 
-### 🏢 16. Company Dashboard & Self-Service Listing Portal
+### 🏢 15. Company Dashboard & Self-Service Listing Portal
 * **Purpose:** A self-service portal for verified Company PICs to publish, update, and manage their own internship positions.
 * **Technologies Used:** Laravel, PHP, Bootstrap, Blade, MySQL.
 * **Methods/Algorithms Used:** 
@@ -215,7 +203,7 @@ Laravel | PHP | MySQL | HTML | CSS | JavaScript | Bootstrap | Python | Leaflet.j
 
 ---
 
-### 🕵️ 17. Automated Listings Availability Checker
+### 🕵️ 16. Automated Listings Availability Checker
 * **Purpose:** Periodically scans the original source URLs of active scraped listings, checks for response statuses, and scans page contents to auto-close expired/occupied items.
 * **Technologies Used:** Laravel Http Client, PHP, MySQL.
 * **Methods/Algorithms Used:**
@@ -226,7 +214,7 @@ Laravel | PHP | MySQL | HTML | CSS | JavaScript | Bootstrap | Python | Leaflet.j
 
 ---
 
-### ⭐ 18. Rating & Review System
+### ⭐ 17. Rating & Review System
 * **Purpose:** Enables students to rate (1-5 stars) and write written reviews for internship postings and rental accommodations.
 * **Technologies Used:** Laravel, PHP, Bootstrap, Blade, Vanilla CSS.
 * **Methods/Algorithms Used:** Database CRUD, SQL Average calculations (`avg('rating')`).
@@ -236,7 +224,7 @@ Laravel | PHP | MySQL | HTML | CSS | JavaScript | Bootstrap | Python | Leaflet.j
 
 ---
 
-### ⏰ 19. Background Jobs, Task Scheduler, & Pipeline Automation
+### ⏰ 18. Background Jobs, Task Scheduler, & Pipeline Automation
 * **Purpose:** Automates background tasks such as list scraping updates, availability checks, and email digests.
 * **Technologies Used:** Laravel Console Scheduler, Artisan.
 * **Methods/Algorithms Used:** 
