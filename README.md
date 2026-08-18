@@ -1,7 +1,9 @@
-# 🎯 InternStay Compass - Project Features & Architecture Catalog
+# 🎯 InternStay - Project Features & Architecture Catalog
 
-Welcome to the **InternStay Compass** repository. This document catalogs every major function, module, and system implemented in the application, including the technologies, methods, algorithms, and components responsible.
+A centralised web-based system that helps students discover internships and nearby rental accommodation in Malaysia
 
+Tech Stack:
+Laravel | PHP | MySQL | HTML | CSS | JavaScript | Bootstrap | Python | Leaflet.js | OpenstreetMap
 ---
 
 ## 🛠️ Implemented Features & Architecture Catalog
